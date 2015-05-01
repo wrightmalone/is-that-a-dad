@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "is-that-a-dad", "is-that-a-dad\is-that-a-dad.csproj", "{D6339043-68CC-431D-88B5-E5E11A62AF4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "is-that-a-dad-form", "is-that-a-dad-form\is-that-a-dad-form.csproj", "{4844307B-BCE3-4C84-A370-A914012E71E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6339043-68CC-431D-88B5-E5E11A62AF4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6339043-68CC-431D-88B5-E5E11A62AF4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6339043-68CC-431D-88B5-E5E11A62AF4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6339043-68CC-431D-88B5-E5E11A62AF4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4844307B-BCE3-4C84-A370-A914012E71E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4844307B-BCE3-4C84-A370-A914012E71E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4844307B-BCE3-4C84-A370-A914012E71E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4844307B-BCE3-4C84-A370-A914012E71E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
