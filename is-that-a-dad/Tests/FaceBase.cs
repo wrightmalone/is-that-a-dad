@@ -12,7 +12,7 @@ namespace is_that_a_dad.Tests
 
     public FaceBase() {
       Face1 = new FaceResponse {
-        Attribute = new Core.Entities.Response.Attribute {
+        Attribute = new Attribute {
           Age = new Age {
             Range = 4,
             Value = 28,
@@ -29,7 +29,7 @@ namespace is_that_a_dad.Tests
       };
 
       Face2 = new FaceResponse {
-        Attribute = new Core.Entities.Response.Attribute {
+        Attribute = new Attribute {
           Age = new Age {
             Range = 7,
             Value = 45,
@@ -46,7 +46,7 @@ namespace is_that_a_dad.Tests
       };
 
       Face3 = new FaceResponse {
-        Attribute = new Core.Entities.Response.Attribute {
+        Attribute = new Attribute {
           Age = new Age {
             Range = 1,
             Value = 15,

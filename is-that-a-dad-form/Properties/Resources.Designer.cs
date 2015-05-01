@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+
 namespace is_that_a_dad_form.Properties
 {
 
@@ -29,6 +30,13 @@ namespace is_that_a_dad_form.Properties
 
     private static global::System.Globalization.CultureInfo resourceCulture;
 
+    internal static System.Drawing.Bitmap loading {
+      get {
+        object obj = ResourceManager.GetObject("loading", resourceCulture);
+        return ((System.Drawing.Bitmap)(obj));
+      }
+    }
+
     [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
     internal Resources() {
     }
@@ -39,7 +47,7 @@ namespace is_that_a_dad_form.Properties
     [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
     internal static global::System.Resources.ResourceManager ResourceManager {
       get {
-        if ((resourceMan == null)) {
+        if (object.ReferenceEquals(resourceMan, null)) {
           global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("is_that_a_dad_form.Properties.Resources", typeof(Resources).Assembly);
           resourceMan = temp;
         }
@@ -58,6 +66,16 @@ namespace is_that_a_dad_form.Properties
       }
       set {
         resourceCulture = value;
+      }
+    }
+
+    /// <summary>
+    ///   Looks up a localized resource of type System.Drawing.Bitmap.
+    /// </summary>
+    internal static System.Drawing.Bitmap hesADadForSure {
+      get {
+        object obj = ResourceManager.GetObject("hesADadForSure", resourceCulture);
+        return ((System.Drawing.Bitmap)(obj));
       }
     }
   }
