@@ -24,9 +24,8 @@ namespace is_that_a_dad.Core.Api
       var response = client.Execute(request);
       if (response.StatusCode != HttpStatusCode.OK) {
         return new List<Face> {
-          new Face{ Age = 0, AgeRange = 0, Gender = "?", GenderConfidence = 0, Race = "?", RaceConfidence = 0 }
+          new Face{ Attribute = { Age = {Range = 0, Value = 0}, Gender = {Value = "?", Confidence = 0}, Race = {Value = "?", Confidence = 0} }, Center = {X = 0, Y = 0}, Height = 0, Width = 0}
         };
-        //throw new Exception(String.Format("Get request returned a status code of: {0}", response.StatusCode));
       }
       var faceData = JsonConvert.DeserializeObject<Response>(response.Content);
       var faces = transformer.Transform(faceData);

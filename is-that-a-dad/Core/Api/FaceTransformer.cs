@@ -11,12 +11,26 @@ namespace is_that_a_dad.Core.Api
       var transformedFaces = new List<Face> { };
       transformedFaces.AddRange(response.Face.Select(
         face => new Face {
-          Age = face.Attribute.Age.Value,
-          AgeRange = face.Attribute.Age.Range,
-          Gender = face.Attribute.Gender.Value,
-          GenderConfidence = face.Attribute.Gender.Confidence,
-          Race = face.Attribute.Race.Value,
-          RaceConfidence = face.Attribute.Race.Confidence,
+          Attribute = new Attribute {
+            Age = new Age {
+              Value = face.Attribute.Age.Value,
+              Range = face.Attribute.Age.Range,
+            },
+            Gender = new Gender {
+              Value = face.Attribute.Gender.Value,
+              Confidence = face.Attribute.Gender.Confidence,
+            },
+            Race = new Race {
+              Value = face.Attribute.Race.Value,
+              Confidence = face.Attribute.Race.Confidence,
+            }
+          },
+          Center = new Point {
+            X = face.Center.X,
+            Y = face.Center.Y,
+          },
+          Height = face.Height,
+          Width = face.Width,
         }));
       return transformedFaces;
     }

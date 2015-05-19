@@ -20,9 +20,9 @@ namespace is_that_a_dad.Tests
 
     [Test]
     public void It_should_get_the_object() {
-      Assert.IsNotNull(Face.Age);
-      Assert.IsNotNullOrEmpty(Face.Gender);
-      Assert.IsNotNullOrEmpty(Face.Race);
+      Assert.IsNotNull(Face.Attribute.Age);
+      Assert.IsNotNullOrEmpty(Face.Attribute.Gender.Value);
+      Assert.IsNotNullOrEmpty(Face.Attribute.Race.Value);
     }
   }
 }

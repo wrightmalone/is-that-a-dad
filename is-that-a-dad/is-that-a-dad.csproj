@@ -62,6 +62,9 @@
     <Compile Include="Core\Dadliness\Responses\LadyResponse.cs" />
     <Compile Include="Core\Dadliness\Responses\TeenagerResponse.cs" />
     <Compile Include="Core\Dadliness\Responses\TwentiesResponse.cs" />
+    <Compile Include="Core\Entities\FaceEnclosureBox\DadDisplayImage.cs" />
+    <Compile Include="Core\Entities\FaceEnclosureBox\FaceEnclosure.cs" />
+    <Compile Include="Core\Entities\Point.cs" />
     <Compile Include="Core\Entities\Response\Attribute.cs" />
     <Compile Include="Core\Entities\Response\Gender.cs" />
     <Compile Include="Core\Entities\Face.cs" />
@@ -70,6 +73,7 @@
     <Compile Include="Core\Entities\Response\Response.cs" />
     <Compile Include="Core\Entities\Response\Race.cs" />
     <Compile Include="Core\Entities\Response\FaceResponse.cs" />
+    <Compile Include="Core\ImageSizing\GetFaceEnclosure.cs" />
     <Compile Include="Core\Settings\ApiSettings.cs" />
     <Compile Include="Core\Inputs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

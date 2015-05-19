@@ -12,17 +12,17 @@ namespace is_that_a_dad.Core.Dadliness
 
     public string CheckDadliness(Face face) {
       var dadliness = "";
-      if (face.Gender != "Male") {
+      if (face.Attribute.Gender.Value != "Male") {
         dadliness += LadyResponse.GenerateLadyResponse(face);
-      } else if (face.Age < 13) {
+      } else if (face.Attribute.Age.Value < 13) {
         dadliness += ChildResponse.GenerateChildResponse(face);
-      } else if (face.Age < 18) {
+      } else if (face.Attribute.Age.Value < 18) {
         dadliness += TeenagerResponse.GenerateTeenagerResponse(face);
-      } else if (face.Age < 25) {
+      } else if (face.Attribute.Age.Value < 25) {
         dadliness += TwentiesResponse.GenerateTwentiesResponse(face);
-      } else if (face.Age < 40) {
+      } else if (face.Attribute.Age.Value < 40) {
         dadliness += "totally dad material.";
-      } else if (face.Age < 50) {
+      } else if (face.Attribute.Age.Value < 50) {
         dadliness += "get prepared to hear some dad jokes. because he's a dad. ";
       } else {
         dadliness += "dude i bet that's a double dad. he's the dad of a dad. ";

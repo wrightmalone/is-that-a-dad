@@ -7,7 +7,7 @@ namespace is_that_a_dad.Core.Dadliness.Responses
     public string GenerateLadyResponse(Face face) {
       var ladyString = "i think that's a lady so prolly not a dad... ";
 
-      if (face.GenderConfidence > .95) {
+      if (face.Attribute.Gender.Confidence > .95) {
         ladyString += "and im pretty sure about it";
       } else {
         ladyString += "but im not so confident";

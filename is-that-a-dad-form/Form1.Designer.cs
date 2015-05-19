@@ -1,4 +1,6 @@
-﻿namespace is_that_a_dad_form
+﻿using System.Windows.Forms;
+
+namespace is_that_a_dad_form
 {
   partial class MainForm
   {
@@ -31,6 +33,9 @@
       this.label1 = new System.Windows.Forms.Label();
       this.ResponseBox = new System.Windows.Forms.TextBox();
       this.Title = new System.Windows.Forms.Label();
+      this.AgeLabel = new System.Windows.Forms.Label();
+      this.AgeTextBox = new System.Windows.Forms.TextBox();
+      this.textBox1 = new System.Windows.Forms.TextBox();
       ((System.ComponentModel.ISupportInitialize)(this.DadImageBox)).BeginInit();
       this.SuspendLayout();
       // 
@@ -42,7 +47,7 @@
       this.button1.TabIndex = 0;
       this.button1.Text = "check dad status";
       this.button1.UseVisualStyleBackColor = true;
-      this.button1.Click += new System.EventHandler(this.button1_Click);
+      this.button1.Click += new System.EventHandler(this.Button1Click);
       // 
       // UrlBox
       // 
@@ -63,6 +68,7 @@
       this.DadImageBox.Location = new System.Drawing.Point(135, 140);
       this.DadImageBox.Name = "DadImageBox";
       this.DadImageBox.Size = new System.Drawing.Size(308, 318);
+      this.DadImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
       this.DadImageBox.TabIndex = 2;
       this.DadImageBox.TabStop = false;
       // 
@@ -84,7 +90,7 @@
       this.ResponseBox.Location = new System.Drawing.Point(56, 579);
       this.ResponseBox.Multiline = true;
       this.ResponseBox.Name = "ResponseBox";
-      this.ResponseBox.Size = new System.Drawing.Size(458, 144);
+      this.ResponseBox.Size = new System.Drawing.Size(458, 73);
       this.ResponseBox.TabIndex = 4;
       this.ResponseBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
       // 
@@ -98,12 +104,48 @@
       this.Title.TabIndex = 5;
       this.Title.Text = "is that a dad?";
       // 
+      // AgeLabel
+      // 
+      this.AgeLabel.AutoSize = true;
+      this.AgeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      this.AgeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.AgeLabel.Location = new System.Drawing.Point(251, 666);
+      this.AgeLabel.Name = "AgeLabel";
+      this.AgeLabel.Size = new System.Drawing.Size(58, 27);
+      this.AgeLabel.TabIndex = 6;
+      this.AgeLabel.Text = "Age:";
+      // 
+      // AgeTextBox
+      // 
+      this.AgeTextBox.Enabled = false;
+      this.AgeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.AgeTextBox.Location = new System.Drawing.Point(222, 696);
+      this.AgeTextBox.Multiline = true;
+      this.AgeTextBox.Name = "AgeTextBox";
+      this.AgeTextBox.Size = new System.Drawing.Size(110, 73);
+      this.AgeTextBox.TabIndex = 7;
+      this.AgeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+      // 
+      // textBox1
+      // 
+      this.textBox1.Enabled = false;
+      this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.textBox1.Location = new System.Drawing.Point(12, 154);
+      this.textBox1.Multiline = true;
+      this.textBox1.Name = "textBox1";
+      this.textBox1.Size = new System.Drawing.Size(279, 292);
+      this.textBox1.TabIndex = 8;
+      this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+      // 
       // MainForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.Honeydew;
-      this.ClientSize = new System.Drawing.Size(583, 770);
+      this.ClientSize = new System.Drawing.Size(583, 815);
+      this.Controls.Add(this.textBox1);
+      this.Controls.Add(this.AgeTextBox);
+      this.Controls.Add(this.AgeLabel);
       this.Controls.Add(this.Title);
       this.Controls.Add(this.ResponseBox);
       this.Controls.Add(this.label1);
@@ -127,6 +169,9 @@
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.TextBox ResponseBox;
     private System.Windows.Forms.Label Title;
+    private System.Windows.Forms.Label AgeLabel;
+    private System.Windows.Forms.TextBox AgeTextBox;
+    private TextBox textBox1;
   }
 }
 
