@@ -4,6 +4,7 @@ using is_that_a_dad.Core.Settings;
 using Newtonsoft.Json;
 using RestSharp;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 
 namespace is_that_a_dad.Core.Api
@@ -24,11 +25,17 @@ namespace is_that_a_dad.Core.Api
       var response = client.Execute(request);
       if (response.StatusCode != HttpStatusCode.OK) {
         return new List<Face> {
-          new Face{ Attribute = { Age = {Range = 0, Value = 0}, Gender = {Value = "?", Confidence = 0}, Race = {Value = "?", Confidence = 0} }, Center = {X = 0, Y = 0}, Height = 0, Width = 0}
+          new Face{ Attribute = new Attribute { Age = new Age {Range = 0, Value = 0}, Gender = new Gender {Value = "?", Confidence = 0}, Race = new Race {Value = "?", Confidence = 0} }, Center = new Point {X = 0, Y = 0}, Height = 0, Width = 0}
         };
       }
       var faceData = JsonConvert.DeserializeObject<Response>(response.Content);
       var faces = transformer.Transform(faceData);
+
+      if (!faces.Any()) {
+        return new List<Face> {
+          new Face{ Attribute = new Attribute { Age = new Age {Range = 0, Value = 0}, Gender = new Gender {Value = "?", Confidence = 0}, Race = new Race {Value = "?", Confidence = 0} }, Center = new Point {X = 0, Y = 0}, Height = 0, Width = 0}
+        };
+      }
       return faces;
     }
   }

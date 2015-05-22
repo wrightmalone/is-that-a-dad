@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿
+
+using System.Windows.Forms;
 
 namespace is_that_a_dad_form
 {
@@ -35,8 +37,15 @@ namespace is_that_a_dad_form
       this.Title = new System.Windows.Forms.Label();
       this.AgeLabel = new System.Windows.Forms.Label();
       this.AgeTextBox = new System.Windows.Forms.TextBox();
-      this.textBox1 = new System.Windows.Forms.TextBox();
+      this.top = new System.Windows.Forms.PictureBox();
+      this.bottom = new System.Windows.Forms.PictureBox();
+      this.left = new System.Windows.Forms.PictureBox();
+      this.right = new System.Windows.Forms.PictureBox();
       ((System.ComponentModel.ISupportInitialize)(this.DadImageBox)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.top)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.bottom)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.left)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.right)).BeginInit();
       this.SuspendLayout();
       // 
       // button1
@@ -71,6 +80,7 @@ namespace is_that_a_dad_form
       this.DadImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
       this.DadImageBox.TabIndex = 2;
       this.DadImageBox.TabStop = false;
+      //this.DadImageBox.Paint += new System.Windows.Forms.PaintEventHandler(this.OnPaint);
       // 
       // label1
       // 
@@ -118,7 +128,7 @@ namespace is_that_a_dad_form
       // AgeTextBox
       // 
       this.AgeTextBox.Enabled = false;
-      this.AgeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.AgeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.AgeTextBox.Location = new System.Drawing.Point(222, 696);
       this.AgeTextBox.Multiline = true;
       this.AgeTextBox.Name = "AgeTextBox";
@@ -126,16 +136,41 @@ namespace is_that_a_dad_form
       this.AgeTextBox.TabIndex = 7;
       this.AgeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
       // 
-      // textBox1
+      // top
       // 
-      this.textBox1.Enabled = false;
-      this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.textBox1.Location = new System.Drawing.Point(12, 154);
-      this.textBox1.Multiline = true;
-      this.textBox1.Name = "textBox1";
-      this.textBox1.Size = new System.Drawing.Size(279, 292);
-      this.textBox1.TabIndex = 8;
-      this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+      this.top.BackColor = System.Drawing.Color.Black;
+      this.top.Location = new System.Drawing.Point(200, 239);
+      this.top.Name = "top";
+      this.top.Size = new System.Drawing.Size(174, 5);
+      this.top.TabIndex = 8;
+      this.top.TabStop = false;
+      // 
+      // bottom
+      // 
+      this.bottom.BackColor = System.Drawing.Color.Black;
+      this.bottom.Location = new System.Drawing.Point(200, 396);
+      this.bottom.Name = "bottom";
+      this.bottom.Size = new System.Drawing.Size(174, 5);
+      this.bottom.TabIndex = 9;
+      this.bottom.TabStop = false;
+      // 
+      // left
+      // 
+      this.left.BackColor = System.Drawing.Color.Black;
+      this.left.Location = new System.Drawing.Point(200, 239);
+      this.left.Name = "left";
+      this.left.Size = new System.Drawing.Size(5, 160);
+      this.left.TabIndex = 10;
+      this.left.TabStop = false;
+      // 
+      // right
+      // 
+      this.right.BackColor = System.Drawing.Color.Black;
+      this.right.Location = new System.Drawing.Point(369, 240);
+      this.right.Name = "right";
+      this.right.Size = new System.Drawing.Size(5, 160);
+      this.right.TabIndex = 11;
+      this.right.TabStop = false;
       // 
       // MainForm
       // 
@@ -143,7 +178,10 @@ namespace is_that_a_dad_form
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.Honeydew;
       this.ClientSize = new System.Drawing.Size(583, 815);
-      this.Controls.Add(this.textBox1);
+      this.Controls.Add(this.right);
+      this.Controls.Add(this.left);
+      this.Controls.Add(this.bottom);
+      this.Controls.Add(this.top);
       this.Controls.Add(this.AgeTextBox);
       this.Controls.Add(this.AgeLabel);
       this.Controls.Add(this.Title);
@@ -152,10 +190,15 @@ namespace is_that_a_dad_form
       this.Controls.Add(this.DadImageBox);
       this.Controls.Add(this.UrlBox);
       this.Controls.Add(this.button1);
+      this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
       this.Name = "MainForm";
       this.Text = "is that a dad?";
       this.TransparencyKey = System.Drawing.Color.SpringGreen;
       ((System.ComponentModel.ISupportInitialize)(this.DadImageBox)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.top)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.bottom)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.left)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.right)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -171,7 +214,10 @@ namespace is_that_a_dad_form
     private System.Windows.Forms.Label Title;
     private System.Windows.Forms.Label AgeLabel;
     private System.Windows.Forms.TextBox AgeTextBox;
-    private TextBox textBox1;
+    private PictureBox top;
+    private PictureBox bottom;
+    private PictureBox left;
+    private PictureBox right;
   }
 }
 
